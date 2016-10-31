@@ -8,6 +8,7 @@ FullPage <- read_html(Link)
 MyPart <- html_nodes(FullPage,"#readme li a")
 withGHlinks <- MyPart[grep("//github",MyPart)]
 justLinks <- html_attr(withGHlinks,"href")
+justText <- html_text(withGHlinks)
 
 ## Function to get stars per repository, in numeric 
 ## In case of numeric (starless), return 0
@@ -21,19 +22,21 @@ getter <- function(x){
 stars <- map_dbl(justLinks,getter)
 
 ## Now make df with all entries with github links and the stars of those links
-df <- data.frame(links = as.character(withGHlinks), stars = stars,stringsAsFactors = F)
+df <- data.frame(names= as.character(justText),
+                 links = as.character(justLinks), 
+                 stars = stars,stringsAsFactors = F)
 
-## Over 400? Add a star to the list of links that contains
-df$links2 <- df$links
-df$links2[df$stars>400] <-
-  gsub('</','<img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20"> </',df$links[df$stars>400])
+## Over 400? Add a star to the list of links that contains them... but start formatting as the README.md
+star <- '<img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">'
+df$names2 <- df$names
+df$names2[df$stars>400] <- paste(df$names[df$stars>400],star,sep="")
 
 ## Now go get the readme.md
-readMe <- readLines("README.md")
+# readMe <- readLines("README.md") ## What is the path on Travis-CI?
+readMe <- readLines("https://raw.githubusercontent.com/qinwf/awesome-R/master/README.md")
 
-## Replacer function
-starrer <- function(x,y){
-  gsub()
-  
+for (i in seq_along(df$names)){
+  readMe <- gsub(paste("\\[",df$names[i],sep=""),paste("\\[",df$names2[i],sep=""),readMe)
 }
-gsub(df$links,df$links2,readMe)
+
+writeLines(readMe,"README.md")
