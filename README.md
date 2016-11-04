@@ -100,7 +100,7 @@ for [Top 50](https://github.com/rstudio/RStartHere/blob/master/top_downloads_201
 * [ggrepel](https://github.com/slowkow/ggrepel) - Repel overlapping text labels away from each other.
 * [ggalt](https://github.com/hrbrmstr/ggalt) - Extra Coordinate Systems, Geoms and Statistical Transformations for ggplot2.
 * [ggtree](https://github.com/GuangchuangYu/ggtree) - Visualization and annotation of phylogenetic tree.
-* [ggplot2 <img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">Extensions](https://ggplot2-exts.github.io/ggiraph.html) - Showcases of ggplot2 extensions.
+* [ggplot2 Extensions](https://ggplot2-exts.github.io/ggiraph.html) - Showcases of ggplot2 extensions.
 * [lattice](http://lattice.r-forge.r-project.org/) - A powerful and elegant high-level data visualization system.
 * [corrplot](https://github.com/taiyun/corrplot) - A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering.
 * [rgl](http://cran.r-project.org/web/packages/rgl/index.html) - 3D visualization device system for R.
@@ -511,8 +511,8 @@ Where to discover new R-esources.
 * [Reference Card for ESS](http://ess.r-project.org/refcard.pdf) - Reference Card for ESS.
 * [R Markdown Cheat sheet](http://shiny.rstudio.com/images/rm-cheatsheet.pdf.zip) - Quick reference guide for writing reports with R Markdown.
 * [Shiny Cheat sheet](http://shiny.rstudio.com/images/cheatsheet.pdf.zip) - Quick reference guide for building Shiny apps.
-* [ggplot2 <img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">Cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf) - Quick reference guide for data visualisation with ggplot2.
-* [devtools <img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">Cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/06/devtools-cheatsheet.pdf) - Quick reference guide to package development in R.
+* [ggplot2 Cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf) - Quick reference guide for data visualisation with ggplot2.
+* [devtools Cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/06/devtools-cheatsheet.pdf) - Quick reference guide to package development in R.
 
 ## MOOCs
 *Massive open online courses.*
@@ -527,7 +527,7 @@ Where to discover new R-esources.
 
 * [Books](https://github.com/RomanTsegelskyi/rbooks) - List of R Books.
 * [DataScienceR<img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20"><img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">](https://github.com/ujjwalkarn/DataScienceR) - a list of R tutorials for Data Science, NLP and Machine Learning.
-* [ggplot2 <img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">Extensions](https://ggplot2-exts.github.io/ggiraph.html) - Showcases of ggplot2 extensions.
+* [ggplot2 Extensions](https://ggplot2-exts.github.io/ggiraph.html) - Showcases of ggplot2 extensions.
 * [Natural Language Processing <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f1e8-1f1f3.png" width="20" heigth="20" align="absmiddle" class="emoji" alt=":cn:">](https://github.com/BZRLC/R-notes/blob/master/NLP/readme.md) - NLP related resources in R. @Chinese
 * [Network Analysis](https://github.com/briatte/awesome-network-analysis) - Network Analysis related resources.
 * [Open Data](https://github.com/ropensci/opendata) - Using R to obtain, parse, manipulate, create, and share open data.

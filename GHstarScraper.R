@@ -26,9 +26,10 @@ df <- data.frame(names= as.character(justText),
                  links = as.character(justLinks), 
                  stars = stars,stringsAsFactors = F)
 
-## Over 400? Add a star to the list of links that contains them... but start formatting as the README.md
+## Over 400? Add a star to the list of links that contains them... but first get rid of all stars
 star <- '<img class="emoji" alt="star" src="https://awesome-r.com/star.png" height="20" align="absmiddle" width="20">'
 df$names2 <- df$names
+df$names2[df$stars>400] <- gsub("<.+?>","",df$names2[df$stars>400])
 df$names2[df$stars>400] <- paste(df$names[df$stars>400],star,sep="")
 
 ## Now go get the readme.md
@@ -36,7 +37,9 @@ df$names2[df$stars>400] <- paste(df$names[df$stars>400],star,sep="")
 readMe <- readLines("https://raw.githubusercontent.com/qinwf/awesome-R/master/README.md")
 
 for (i in seq_along(df$names)){
-  readMe <- gsub(paste("\\[",df$names[i],sep=""),paste("\\[",df$names2[i],sep=""),readMe)
+  readMe <- gsub(paste("\\[",df$names[i]," *(?![a-zA-Z])",sep=""),
+         paste("\\[",df$names2[i],sep=""),
+         readMe,perl = T)
 }
 
 writeLines(readMe,"README.md")
